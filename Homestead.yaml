@@ -1,21 +1,23 @@
 ---
-ip: "192.168.10.10"
-memory: 2048
-cpus: 1
+ip: "10.0.0.100" # ip-адрес, который будет назначен виртуальному серверу
+memory: 1024 # сколько памяти вы дадите виртуальному серверу (рекомендуется >=1024)
+cpus: 1 # сколько процессоров вы дадите виртуальном серверу
 
-authorize: /Users/me/.ssh/id_rsa.pub
+# путь к папке, где находятся ключи ssh
+authorize: C:\Users\#username#\.ssh\id_rsa.pub
 
+# путь к публичному ключу
 keys:
-    - /Users/me/.ssh/id_rsa
+    - C:\Users\#username#\.ssh\id_rsa
 
+# директории, которые будут общими на вашем диске и на сервере
 folders:
-    - map: /Users/me/Code
-      to: /home/vagrant/Code
+    - map: C:\dps\www\fintech-fab.dev # путь к проекту на вашем диске
+      to: /home/vagrant/fintech-fab.dev # путь к проекту на виртуальном сервере
 
+# сайты, которые будут запущены на сервере
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
-
-variables:
-    - key: APP_ENV
-      value: local
+    - map: fintech-fab.dev # имя хоста на сервере
+      to: /home/vagrant/fintech-fab.dev/public # публичная директория проекта на сервере
+    - map: pma.dev # имя хоста для phpmyadmin
+      to: /home/vagrant/pma # путь к phpmyadmin на сервере

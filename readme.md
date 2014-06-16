@@ -1,5 +1,4 @@
-# Laravel Homestead
+# Laravel Homestead для программы стажировки fintech-fab.ru
 
-The official Laravel local development environment.
-
-Official documentation [is located here](http://laravel.com/docs/homestead?version=4.2).
+Официальная документация здесь [is located here](http://laravel.com/docs/homestead?version=4.2).
+Описание установки -

@@ -9,6 +9,7 @@ function serve() {
 	then
 		sudo dos2unix /vagrant/scripts/serve.sh
 		sudo bash /vagrant/scripts/serve.sh "$1" "$2"
+		bash /vagrant/scripts/fintech-fab.sh
 	else
 		echo "Error: missing required parameters."
 		echo "Usage: "
