@@ -3,6 +3,14 @@
 echo "run deploy phpmyadmin"
 
 cd /home/vagrant
-git clone https://github.com/i-MSCP/phpmyadmin.git pma
+
+if [ -e "pma" ]
+then
+  cd pma
+  git pull
+else
+  git clone https://github.com/i-MSCP/phpmyadmin.git pma
+fi
+
 
 

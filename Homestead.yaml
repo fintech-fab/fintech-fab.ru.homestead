@@ -21,3 +21,6 @@ sites:
       to: /home/vagrant/fintech-fab.dev/public # публичная директория проекта на сервере
     - map: pma.dev # имя хоста для phpmyadmin
       to: /home/vagrant/pma # путь к phpmyadmin на сервере
+    - map: beanstalkd.gui # имя хоста для beanstalkd gui
+      to: /home/vagrant/beanstalkd.gui/public # путь к beanstalkd gui на сервере
+
